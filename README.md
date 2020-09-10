@@ -20,10 +20,15 @@ After using a tool like Labelbox, CVAT or makesense.ai to label your images, exp
 
 
 Each image's file should be /images/*.jpg with its pathname. An example would be:
-
-        dataset/images/train2017/000000109622.jpg  # image
+     
+     /home/anil/Videos/yolov5/data/image/750P02F-ZOSP1-N_191_A_1_NG10_10.jpeg
         
-location of the txt file and jpeg file should be in the same folder         
+        
+location of the txt file and jpeg file should be in the same folder.
+
+# Train
+
+Train a YOLOv5s model on your data  by specifying model config file --cfg models/yolo5s.yaml, and dataset config file --data data/anil.yaml. Start training from pretrained --weights yolov5s.pt, or from randomly initialized --weights ''. Pretrained weights are auto-downloaded from Google Drive.
         
 
 
