@@ -6,7 +6,7 @@ In this repository i have implemented yolo v5 using pytorch.
 
 2) pip install -qr requirements.txt 
 
-3) you need to edit the anil.yaml file.according to your data location and number of classes.
+3) you need to edit the elephent.yaml file.according to your data location and number of classes.
 
 # Create Labels
 
@@ -28,9 +28,16 @@ location of the txt file and jpeg file should be in the same folder.
 
 # Train
 
-Train a YOLOv5s model on your data  by specifying model config file --cfg models/yolo5s.yaml, and dataset config file --data data/anil.yaml. Start training from pretrained --weights yolov5s.pt, or from randomly initialized --weights ''. Pretrained weights are auto-downloaded from Google Drive.
+Train a YOLOv5s model on your data  by specifying model config file --cfg models/yolo5s.yaml, and dataset config file --data data/elephant.yaml. Start training from pretrained --weights yolov5s.pt, or from randomly initialized --weights ''. Pretrained weights are auto-downloaded from Google Drive.
         
+command line for trainining:
 
+     $ python train.py --img 640 --batch 16 --epochs 5 --data ./data/coco128.yaml --cfg ./models/yolov5s.yaml --weights ''
+     
+# Testing
 
-  
+commnad line for testing:
+
+     $ python detect.py --source ./inference/images/ --weights yolov5s.pt --conf 0.4
+      
   
